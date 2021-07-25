@@ -1,0 +1,55 @@
+
+<?php
+
+require('backends/connection-pdo.php');
+
+$sql = 'SELECT * FROM categories';
+
+$query  = $pdoconn->prepare($sql);
+$query->execute();
+$arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
+<section class="fcategories">
+
+	<div class="container">
+
+		<div class="section white center">
+			<h3 class="header">Categories</h3>
+		</div>
+
+
+		<div class="row">
+			<div class="col s12 m4">
+			<div class="card" style="width: 18rem, display: flex, justify-content:space-between;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Card image cap" width="270" height="300">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" class="btn btn-primary"> Go somewhere</a>
+  </div>
+            </div>
+			</div>
+			<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+		</div>
+
+	</div>
+	
+</section>
